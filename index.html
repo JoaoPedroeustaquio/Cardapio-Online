@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./styles/output.css" />
+
+    <title>DevBurguer - A melhor hamburgeria dev!</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+      <div class="w-full h-full flex flex-col justify-center items-center">
+        <img
+          src="./assets/hamb-1.png"
+          alt="Logo DevBurguer"
+          class="w-32 h32 rounded-full shadow-lg hover:scale-110 duration-200"
+        />
+        <h1 class="text-4xl text-white mt-4 mb-2 font-bold">DevBurguer</h1>
+
+        <span class="font-medium text-white">Rua dev 10, São Paulo - SP</span>
+
+        <div class="bg-green-500 px-4 py-1 rounded-lg mt-5" id="date-span">
+          <span class="text-white font-medium">Seg á Dom - 18:00 as 22:00</span>
+        </div>
+      </div>
+    </header>
+    <!-- FIM HEADER -->
+
+    
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+      Conheça nosso menu
+    </h2>
+    
+    <!-- MENU -->
+    <div id="menu">
+      <main
+        class="grid grid-cols-1 gap-7 md:gap-10 md:grid-cols-2 mx-auto max-w-7xl px-2 mb-16"
+      >
+        <!-- Produto item -->
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-1.png"
+            loading="lazy"
+            alt="Hamburguer Smash Duplo"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div>
+            <p class="font-bold">Hamburguer Smash Duplo</p>
+            <p class="text-sm">
+              Pão, 2 hambúrgueres, queijo cheddar, queijo mussarela, queijo
+              prato, Bacon crocante, alface picado e maionese
+            </p>
+
+            <div class="flex items-center gap-2 justify-between">
+              <p class="font-bold text-lg">R$ 18.90</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Hamburguer Smash Duplo"
+                data-price="18.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-2.png"
+            loading="lazy"
+            alt="Hamburguer Duplo"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-full">
+            <p class="font-bold">Hamburguer Duplo</p>
+            <p class="text-sm">
+              Pão, cheddar, 2x hambúrguer's, Bacon e batata frita
+            </p>
+
+            <div class="flex items-center gap-2 justify-between">
+              <p class="font-bold text-lg">R$ 32.90</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Hamburguer Duplo"
+                data-price="32.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white justify-end"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-3.png"
+            loading="lazy"
+            alt="X-EGG"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-full">
+            <p class="font-bold">X-EGG</p>
+            <p class="text-sm">
+              Pão, queijo cheddar, bacon, molho barbecue e ovo
+            </p>
+
+            <div class="flex items-center gap-2 justify-between">
+              <p class="font-bold text-lg">R$ 35.80</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="X-EGG"
+                data-price="35.80"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-4.png"
+            loading="lazy"
+            alt="Hamburguer de Frango"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div>
+            <p class="font-bold">Hamburguer de Frango</p>
+            <p class="text-sm">
+              Pão levinho de fermentação natural da Trigou, burger 160g, queijo
+              prato e maionese da casa
+            </p>
+
+            <div class="flex items-center gap-2 justify-between">
+              <p class="font-bold text-lg">R$ 31.20</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Hamburguer de Frango"
+                data-price="31.20"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-5.png"
+            loading="lazy"
+            alt="Hamburguer Artesanal"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div>
+            <p class="font-bold">Hamburguer Artesanal</p>
+            <p class="text-sm">
+              Pão, Queijo Cheddar maionese, alface, tomate, pepino, Hamburguers,
+              bacon e Cebola
+            </p>
+
+            <div class="flex items-center gap-2 justify-between">
+              <p class="font-bold text-lg">R$ 39.50</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Hamburguer Artesanal"
+                data-price="39.50"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-6.png"
+            loading="lazy"
+            alt="Hamburguer Americano Artesanal"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-full">
+            <p class="font-bold">Hamburguer Americano Artesanal</p>
+            <p class="text-sm">
+              Pão, Queijo, barbecue, alface, tomate, Hamburguers, bacon e Cebola
+              roxa
+            </p>
+
+            <div class="flex items-center gap-2 justify-between">
+              <p class="font-bold text-lg">R$ 40.00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Hamburguer Americano Artesanal"
+                data-price="40.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-7.png"
+            loading="lazy"
+            alt="Hamburguer  Cowboy  Artesanal angus"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div>
+            <p class="font-bold">Hamburguer Cowboy Artesanal angus</p>
+            <p class="text-sm">
+              Pão Clássico, 2 burger's 120g angus, dois queijos, bacon, Molho
+              Especial, barbecue e anéis de cebola.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between">
+              <p class="font-bold text-lg">R$ 38.60</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Hamburguer  Cowboy Artesanal angus"
+                data-price="38.60"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img
+            src="./assets/hamb-8.png"
+            loading="lazy"
+            alt="hambúrguer vegano empanado"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div>
+            <p class="font-bold">hambúrguer vegano empanado</p>
+            <p class="text-sm">
+              Pão Clássico, cebola branca fatiada, avocado maduro, wasabi,
+              alface americana, alface americana, Picles e repolho roxo .
+            </p>
+
+            <div class="flex items-center gap-2 justify-between">
+              <p class="font-bold text-lg">R$ 36.60</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="hambúrguer vegano empanado"
+                data-price="36.60"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+      </main>
+
+      <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="font-bold text-3xl">Bebidas</h2>
+      </div>
+      <!-- Bebidas Grid -->
+      <div class="grid grid-cols-1 gap-7 md:gap-10 md:grid-cols-2 mx-auto max-w-7xl px-2 mb-16">
+        <div class="flex gap-2">
+          <img
+            src="./assets/refri-1.png"
+            loading="lazy"
+            alt="Coca-Lata"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-full">
+            <p class="font-bold">Coca-Lata</p>
+
+            <div class="flex items-center gap-2 justify-between">
+              <p class="font-bold text-lg">R$ 6</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Coca-Lata"
+                data-price="6"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+
+          <img
+            src="./assets/refri-2.png"
+            loading="lazy"
+            alt="Guarana lata"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-full">
+            <p class="font-bold">Guarana lata</p>
+
+            <div class="flex items-center gap-2 justify-between">
+              <p class="font-bold text-lg">R$ 6</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Guarana lata"
+                data-price="6"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+    </div>
+    <!-- FIM DO MENU -->
+
+    <!-- Modal cart -->
+    <div class="bg-black/60  w-full h-full fixed top-0 left-0 z-[99]  items-center justify-center hidden" id="cart-modal">
+
+      <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+        <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+
+        <p class="font-bold"> Total <span id="cart-total">0.00</span></p>
+
+        <p class="font-bold mt-4">Endereço de entrega</p>
+        <input
+          type="text"
+          id="address"
+          class="w-full border-2 border-gray-300 p-1 rounded my-1"
+          placeholder="Digite seu endereço completo"
+        />
+
+        <p class="text-red-700 hidden" id="address-warn">Digite seu endereço completo!</p>
+
+        <div class="flex items-center justify-between mt-5 w-full">
+          <button id="close-modal-btn">Fechar</button>
+          <button id="checkout-btn" class="bg-green-500 rounded-md px-4 py-1 text-white">Finalizar pedido</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Fim modal cart -->
+
+    <!-- Button card footer -->
+    <footer class="w-full bg-red-500  py-2 fixed bottom-0 z-40 flex items-center justify-center">
+      <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+        (<span id="cart-count"> 0</span>)
+        Veja meu carrinho
+        <i class="fa fa-shopping-cart text-white"></i>
+      </button>
+    </footer>
+    <!-- Fim button card footer -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
